@@ -1,191 +1,162 @@
-html, body{
-    overflow-x: hidden;
-    width: 100%;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
-
-    /* Gambar latar */
-    background-image: 
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url('bakar.jpg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("bakar.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    overflow-x:hidden;
 }
 
-/*================ HEADER =================*/
+/* ================= HEADER ================= */
 
 header{
+    position:fixed;
+    top:0;
+    left:0;
     width:100%;
-    background: transparent; /* menghapus latar putih */
-    padding:0;
+    z-index:999;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(8px);
 }
 
 nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 80px;
-    background: transparent; /* navbar transparan */
-}
-
-/*================ NAVBAR =================*/
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 80px;
 }
 
 .logo h1{
-    color:#000;
-    font-size:40px;
-    letter-spacing:2px;
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
 }
 
-.logo p{
-    color:#000;
-    text-align:center;
+.logo h2{
+    color:#ffd1dc;
     font-size:15px;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-}
-
-nav ul li{
-    margin-left:30px;
-}
-
-nav ul li a{
-    color: black; /* tulisan menu tetap hitam */
-    text-decoration:none;
     font-weight:500;
 }
 
-.logo h1,
-.logo h2{
-    color: black; /* logo tetap hitam */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
-nav ul li a:hover{
-    color:pink;
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
 }
 
-/*================ HERO =================*/
+nav ul li a:hover,
+nav ul li a.active{
+    color:#ffb6c1;
+}
+
+/* ================= HOME ================= */
 
 .hero{
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start; /* posisi mulai dari atas */
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-    padding-top: 120px; /* jarak dari atas */
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:120px 20px 40px;
 }
 
 .hero h1{
-    font-size: 56px;
-    font-weight: bold;
-    line-height: 1.2; /* agar tulisan sejajar */
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    font-size:60px;
+    color:#111;
+    margin-bottom:25px;
+    text-shadow:2px 2px 10px rgba(255,255,255,.3);
 }
 
 .hero p{
-    font-size: 24px; /* tulisan deskripsi lebih besar */
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-}
-
-.hero .btn{
-    margin-top: 60px; /* tombol pindah lebih ke bawah */
-    display: inline-block;
-    padding: 18px 45px;
-    background: pink;
-    color: white;
-    text-decoration: none;
-    border-radius: 40px;
-    font-size: 20px;
-    font-weight: bold;
-    transition: .3s;
-}
-
-.hero .btn:hover{
-    background: #e91e63;
-}
-
-.label{
-    background:white;
-    color:#FF1493;
-    padding:8px 18px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:bold;
-}
-
-.hero h2{
-    margin-top:45px;
-    font-size:15px;
+    max-width:850px;
+    color:#fff;
+    font-size:22px;
+    line-height:1.8;
 }
 
 .btn{
-    margin-top:35px;
     display:inline-block;
-    padding:15px 35px;
-    background:pink;
-    color:white;
+    margin-top:45px;
+    padding:16px 40px;
+    background:#ff6fa5;
+    color:#fff;
     text-decoration:none;
     border-radius:40px;
+    font-size:18px;
+    font-weight:600;
     transition:.3s;
 }
 
 .btn:hover{
-    background:#000;
+    background:#e91e63;
+    transform:translateY(-3px);
 }
 
-/*================ MENU =================*/
+/* ================= SECTION ================= */
 
 section{
-    padding:70px;
+    padding:150px 60px 80px;
 }
 
 section h2{
     text-align:center;
-    font-size:40px;
+    color:#fff;
+    font-size:45px;
     margin-bottom:40px;
+    text-shadow:2px 2px 8px rgba(0,0,0,.8);
+    }
+
+/* ================= MENU ================= */
+
+.menu{
+    padding-top:150px;
 }
 
 .card-container{
     display:flex;
     justify-content:center;
-    gap:30px;
+    align-items:stretch;
     flex-wrap:wrap;
+    gap:30px;
 }
 
 .card{
-    width:320px;
-    background:white;
-    border-radius:15px;
+    width:300px;
+    background:#fff;
+    border-radius:20px;
     overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
     transition:.3s;
+    text-align:center;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .card img{
@@ -195,119 +166,20 @@ section h2{
 }
 
 .card h3{
-    padding:15px;
-}
-
-.card p{
-    padding:0 15px;
-}
-
-.card h4{
-    color:#000;
-    padding:15px;
-}
-/*================ MENU MINUMAN =================*/
-
-section{
-    padding:70px;
-}
-
-section h2{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:40px;
-}
-
-.card-container{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
-
-.card{
-    width:320px;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card h3{
-    padding:15px;
-}
-
-.card p{
-    padding:0 15px;
+    margin-top:18px;
+    font-size:26px;
+    color:#222;
+    font-weight:700;
 }
 
 .card h4{
-    color:#000;
-    padding:15px;
+    margin:10px 0 20px;
+    color:#ff4d88;
+    font-size:22px;
+    font-weight:600;
 }
 
-/*================ MENU DESSERT =================*/
-
-section{
-    padding:70px;
-    
-}
-
-section h2{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:40px;
-}
-
-.card-container{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
-
-.card{
-    width:320px;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card h3{
-    padding:15px;
-}
-
-.card p{
-    padding:0 15px;
-}
-
-.card h4{
-    color:#000;
-    padding:15px;
-}
+/* Tombol Pesan Sekarang */
 
 .pesan-sekarang{
     text-align:center;
@@ -315,170 +187,140 @@ section h2{
 }
 
 .pesan-sekarang .btn{
-    display:inline-block;
-    padding:15px 35px;
-    background:#F48FB1;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:0.3s;
+    margin-top:0;
 }
 
-.pesan-sekarang .btn:hover{
-    background:#E91E63;
-}
-
-/*================ ABOUT =================*/
+/* ================= TENTANG ================= */
 
 .about{
-    width: 100%;
-    padding: 60px 20px;
-    box-sizing: border-box;
-    overflow-x: hidden;
+    padding-top:150px;
 }
 
 .about-container{
-    max-width: 1000px;
-    margin: auto;
-    display: flex;
-    flex-direction: column; /* gambar di atas, teks di bawah */
-    align-items: center;
-    gap: 30px;
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
 }
 
 .about-image{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    flex:1;
+    min-width:300px;
+    text-align:center;
 }
 
 .about-image img{
-    width: 100%;
-    max-width: 350px; /* ukuran gambar pas untuk HP */
-    height: auto;
-    border-radius: 20px;
-    display: block;
-    object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width:100%;
+    max-width:380px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
 }
 
 .about-text{
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    color: #000; /* tulisan hitam agar jelas */
-}
-
-.about-text h2{
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #000;
+    flex:2;
+    min-width:300px;
 }
 
 .about-text p{
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #333;
+    color:#fff;
+    font-size:18px;
+    line-height:1.9;
+    text-align:justify;
+    margin-bottom:18px;
+}
+
+.about-text strong{
+    color:#111;
+    background:#fff;
+    padding:2px 6px;
+    border-radius:5px;
 }
 
 .about-text h3{
-    font-size: 28px;
-    margin: 30px 0 15px;
-    color: #ff4d88;
+    color:#ff9fc2;
+    font-size:30px;
+    margin:25px 0 15px;
 }
 
 .about-text ul{
-    list-style: none;
-    padding: 0;
+    margin-left:25px;
 }
 
-.about-text p,
-.about-text ul li{
-    color: white; /* semua teks deskripsi menjadi putih */
+.about-text li{
+    color:#fff;
+    margin-bottom:12px;
+    line-height:1.8;
+    
+/* ================= SARAN ================= */
+
+.saran{
+    padding-top:150px;
 }
 
-/* Tulisan Bakso Bakar Ihsan Idol menjadi hitam pekat */
-.about-text p strong{
-    color: #000;
-    font-weight: 700;
-}
-
-/*================ SARAN & KRITIK =================*/
-
-#saran{
-    padding:70px;
-    background:#FCE4EC;
+.saran .subjudul{
+    color:#fff;
     text-align:center;
+    max-width:800px;
+    margin:0 auto 35px;
+    line-height:1.8;
+    font-size:18px;
 }
 
-#saran h2{
-    font-size:40px;
-    margin-bottom:15px;
-    color:#000;
-}
-
-.subjudul{
-    color:#555;
-    margin-bottom:35px;
-}
-
-.form-saran{
-    width:100%;
-    max-width:650px;
+.form-box{
+    max-width:700px;
     margin:auto;
+    background:rgba(255,255,255,.95);
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 .form-saran input,
+.form-saran select,
 .form-saran textarea{
     width:100%;
     padding:15px;
-    margin-bottom:20px;
-    border:2px solid #F8BBD0;
+    margin-bottom:18px;
+    border:1px solid #ddd;
     border-radius:10px;
     font-size:16px;
-    outline:none;
+    font-family:'Poppins',sans-serif;
 }
 
-.form-saran input:focus,
-.form-saran textarea:focus{
-    border-color:#E91E63;
+.form-saran textarea{
+    resize:none;
 }
 
 .form-saran button{
-    background:#E91E63;
-    color:white;
-    padding:15px 40px;
+    width:100%;
+    padding:15px;
     border:none;
-    border-radius:30px;
-    font-size:16px;
+    border-radius:10px;
+    background:#ff4d88;
+    color:#fff;
+    font-size:18px;
     cursor:pointer;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .form-saran button:hover{
-    background:#C2185B;
+    background:#e91e63;
 }
 
-/*================ KONTAK =================*/
+/* ================= KONTAK ================= */
 
 .kontak{
-    width:100%;
-    padding:70px 10%;
-    background:#ffffff;
-    text-align:center;
-}
-
-.kontak h2{
-    font-size:35px;
-    color:#000;
-    margin-bottom:15px;
+    padding-top:150px;
 }
 
 .kontak .subjudul{
-    color:#555;
+    color:#fff;
+    text-align:center;
     margin-bottom:40px;
+    font-size:18px;
 }
 
 .kontak-container{
@@ -488,10 +330,11 @@ section h2{
 }
 
 .kontak-card{
-    background:#ffc0cb;
+    background:rgba(255,255,255,.95);
+    border-radius:18px;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
     transition:.3s;
 }
 
@@ -500,7 +343,7 @@ section h2{
 }
 
 .kontak-card h3{
-    color:#e91e63;
+    color:#ff4d88;
     margin-bottom:15px;
 }
 
@@ -510,69 +353,90 @@ section h2{
 }
 
 .kontak-card .btn{
-    display:inline-block;
     margin-top:15px;
-    background:#ff4d88;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:8px;
-    transition:.3s;
 }
 
-.kontak-card .btn:hover{
-    background:#e91e63;
-}
-
-/*================ FOOTER =================*/
+/* ================= FOOTER ================= */
 
 footer{
-    background:white;
-    color:black;
+    margin-top:80px;
+    background:#fff;
+    color:#222;
     text-align:center;
-    padding:40px;
+    padding:30px 20px;
+}
+
+footer h2{
+    color:#ff4d88;
+    margin-bottom:10px;
 }
 
 footer p{
-    margin:10px;
+    margin:8px 0;
 }
 
-.copy{
-    margin-top:25px;
-    color:#000;
-    font-weight:bold;
-}
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:768px){
 
-nav{
-    flex-direction:column;
-}
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
 
-nav ul{
-    margin-top:20px;
-    flex-wrap:wrap;
-    justify-content:center;
-}
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+    }
 
-.hero h2{
-    font-size:40px;
-}
+    nav ul li a{
+        font-size:15px;
+    }
 
-.hero p{
-    font-size:18px;
-}
+    .hero{
+        padding-top:180px;
+    }
 
-}
+    .hero h1{
+        font-size:40px;
+    }
 
-/* Warna tulisan header putih untuk semua halaman selain Home */
-header .logo h1,
-header .logo h2,
-header nav ul li a{
-    color: white;
-}
+    .hero p{
+        font-size:17px;
+    }
 
-header nav ul li a:hover,
-header nav ul li a.active{
-    color: #ffd1dc; /* pink muda saat hover atau halaman aktif */
+    section{
+        padding:180px 20px 60px;
+    }
+
+    section h2{
+        font-size:34px;
+    }
+
+    .about-container{
+        flex-direction:column;
+    }
+
+    .about-image img{
+        max-width:300px;
+    }
+
+    .about-text{
+        text-align:center;
+    }
+
+    .about-text p{
+        text-align:center;
+    }
+
+    .card{
+        width:100%;
+        max-width:340px;
+    }
+
+    .form-box{
+        padding:20px;
+    }
 }
