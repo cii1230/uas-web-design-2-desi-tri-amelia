@@ -10,10 +10,7 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    color:#fff;
-    background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("bakar.jpg");
+    background-image: url("bakar.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -129,7 +126,7 @@ section h2{
     font-size:45px;
     margin-bottom:40px;
     text-shadow:2px 2px 8px rgba(0,0,0,.8);
-    }
+}
 
 /* ================= MENU ================= */
 
@@ -253,7 +250,8 @@ section h2{
     color:#fff;
     margin-bottom:12px;
     line-height:1.8;
-    
+}
+
 /* ================= SARAN ================= */
 
 .saran{
